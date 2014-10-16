@@ -1,0 +1,27 @@
+/*
+ * Programa que lee números hasta que se lee un negativo y muestra la
+ * suma de los números leídos
+ */
+//importa todas las clases del paquete java.util
+import java.util.*;
+//Clase Principal
+public class Ejemplo1While {
+//Arranque del programa
+    public static void main(String[] args) {
+//Se define las variables de tipo INT, suma tiene un valor 0 por defecto
+        int suma = 0, num;
+//Clase Scanner recogera lo que se introduzca por el teclado 
+        Scanner sc = new Scanner(System.in);
+//Muestra por pantalla que introduzcamos un numero
+        System.out.print("Introduzca un número: ");
+//Se recoge el valor en tipo INT, y lo metemos en la variable num
+        num = sc.nextInt();
+//Hace un bucle que si el valor de la variable es igual o mayor que 0 que entre en el. Dentro hara un calculo de suma entre las variables suma y num, el valor del calculo se lo metemos a la variable suma. Despues nos saldra otro mensaje para introducir otro numero y este se recogera de tipo INT en la variable num
+        while (num >= 0){
+               suma = suma + num;
+               System.out.print("Introduzca un número: ");
+               num = sc.nextInt();
+        }
+        System.out.println("La suma es: " + suma );
+    }
+}
